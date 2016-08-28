@@ -39,8 +39,8 @@ const START_BOARD: Board = [
     None, None, None, None, None, None, None, None, None, None
 ];
 
-fn asAscii(b: Board) -> String {
-    return "".to_string()
+fn as_ascii(b: Board) -> String {
+    return "".to_string();
 }
 
 #[cfg(test)]
@@ -48,17 +48,15 @@ mod tests {
     #[test]
     fn starting_board_as_ascii() {
         use super::START_BOARD;
-        use super::asAscii;
+        use super::as_ascii;
 
-        let chk = "RNBQKBNR\
+        assert!(as_ascii(START_BOARD) == "RNBQKBNR\
 PPPPPPPP
 ._._._._
 _._._._.
 ._._._._
 _._._._.
 pppppppp
-rnbqkbnr";
-
-        assert!(asAscii(START_BOARD) == chk);
+rnbqkbnr");
     }
 }
