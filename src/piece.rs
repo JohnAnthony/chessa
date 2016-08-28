@@ -12,7 +12,7 @@ pub enum Piece {
     White(Type)
 }
 
-fn as_character(p: Piece) -> char {
+pub fn as_character(p: Piece) -> char {
     return match p {
         Piece::Black(Type::Pawn) => 'P',
         Piece::Black(Type::Knight) => 'N',
